@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "70445451-7f08-451b-a383-f0b54e42840c",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19262289"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"API response contains the expected fields\", () => {\r",
+							"  const response = pm.response.json();\r",
+							"\r",
+							"  // the line below checks value of the id field is 2 (number).\r",
+							"  pm.expect(response).to.have.property(\"id\", 2);\r",
+							"\r",
+							"  // the line below checks value of the name field is Morty Smith (string).\r",
+							"  pm.expect(response).to.have.property(\"name\", \"Morty Smith\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"API response contains the expected fields\", () => {\r",
+							"  const response = pm.response.json();\r",
+							"\r",
+							"  // the line below checks value of the id field is 2 (number).\r",
+							"  pm.expect(response).to.have.nested.property(\"id\", 2);\r",
+							"\r",
+							"  // the line below checks value of the name field is Morty Smith (string).\r",
+							"  pm.expect(response).to.have.nested.property(\"name\", \"Morty Smith\");\r",
+							"\r",
+							"  // the line below checks value of the origin.name field is Earth (C-137) (string).\r",
+							"  pm.expect(response).to.have.nested.property(\"origin.name\", \"unknown\");\r",
+							"});\r",
+							"pm.test(\"API response contains the expected fields\", () => {\r",
+							"  const response = pm.response.json();\r",
+							"\r",
+							"  // the line below checks the value of the origin.name field is Earth (C-137) (string).\r",
+							"  pm.expect(response).to.have.nested.property(\"episode.1\", \"https://rickandmortyapi.com/api/episode/2\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character/2",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://officebackupapps.apps-stage.mspbackups.com/api/odata/Domains(b630d370-1e81-da08-0000-0239a4cdfc13)/ConfigureServices",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"API response contains the expected fields\", () => {\r",
+							"  const response = pm.response.json();\r",
+							"\r",
+							"  // the line below checks value of the id field is 2 (number).\r",
+							"  pm.expect(response).to.have.property(\"id\", 2);\r",
+							"\r",
+							"  // the line below checks value of the name field is Morty Smith (string).\r",
+							"  pm.expect(response).to.have.property(\"name\", \"Morty Smith\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"API response contains the expected fields\", () => {\r",
+							"  const response = pm.response.json();\r",
+							"\r",
+							"  // the line below checks value of the id field is 2 (number).\r",
+							"  pm.expect(response).to.have.nested.property(\"id\", 2);\r",
+							"\r",
+							"  // the line below checks value of the name field is Morty Smith (string).\r",
+							"  pm.expect(response).to.have.nested.property(\"name\", \"Morty Smith\");\r",
+							"\r",
+							"  // the line below checks value of the origin.name field is Earth (C-137) (string).\r",
+							"  pm.expect(response).to.have.nested.property(\"origin.name\", \"unknown\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "officebackupapps.apps-stage.mspbackups.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru,en-US;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json; charset=UTF-8"
+					},
+					{
+						"key": "cookie",
+						"value": "_ga=GA1.3.1965345408.1645539191; offset=-180; _ga=GA1.2.579659360.1645688974; ph_phc_gkxV2OJ4Rv0JQNq5pYTglr5yaAWltCMRS0Vfiv2NHSu_posthog=%7B%22distinct_id%22%3A%221a989efd-c148-477f-87c5-64ff602a9bcb%22%2C%22%24device_id%22%3A%22180655db8e12d0-02dfc709f1a383-6b3e555b-1fa400-180655db8e2c92%22%2C%22%24initial_referrer%22%3A%22https%3A%2F%2Fbugfix.stage.mspbackups.com%2FAdmin%2FLogin.aspx%3Fref%3D%252FAdmin%252FDefault.aspx%22%2C%22%24initial_referring_domain%22%3A%22bugfix.stage.mspbackups.com%22%2C%22%24referrer%22%3A%22https%3A%2F%2Fbugfix.stage.mspbackups.com%2FAP%2FLicenses.aspx%22%2C%22%24referring_domain%22%3A%22bugfix.stage.mspbackups.com%22%2C%22%24sesid%22%3A%5B1651173453765%2C%22180719b6fc665a-0d61b8edc778d3-6b3e555b-1bcab9-180719b6fc7710%22%5D%2C%22%24session_recording_enabled_server_side%22%3Afalse%2C%22%24active_feature_flags%22%3A%5B%5D%2C%22%24enabled_feature_flags%22%3A%7B%7D%2C%22%24user_id%22%3A%221a989efd-c148-477f-87c5-64ff602a9bcb%22%7D; _sleek_product=%7B%22token%22%3A%225154239742cac9c2518efbbf03632b0aef6ae8f90%22%2C%22user_data%22%3A%7B%22user_id%22%3A276501%2C%22admin_id%22%3A0%2C%22sso%22%3Atrue%2C%22anonymous%22%3Afalse%2C%22data_name%22%3A%22eb1349%22%2C%22data_full_name%22%3A%22%22%2C%22data_mail%22%3A%22eb%40wnet.ru%22%2C%22data_img%22%3A%22https%3A%2F%2Fstorage.sleekplan.com%2Fstatic%2Fimage%2Fuser.png%22%2C%22segments%22%3A%5B%5D%2C%22notify%22%3A1%2C%22notify_settings%22%3A%7B%22mention%22%3Atrue%2C%22changelog%22%3Afalse%2C%22subscribed%22%3Atrue%7D%7D%7D; ph_phc_98DByovK2hhLn5EuqWM3jC5rpAZECyjwr0f4ln3gZDO_posthog=%7B%22distinct_id%22%3A%221a989efd-c148-477f-87c5-64ff602a9bcb%22%2C%22%24device_id%22%3A%221808e7b5d032a7-0dbfc39c180ef6-6b3e555b-1bcab9-1808e7b5d04ad1%22%2C%22%24initial_referrer%22%3A%22https%3A%2F%2Fbugfix.stage.mspbackups.com%2FAdmin%2FLogin.aspx%3Fref%3D%252FAdmin%252FDefault.aspx%22%2C%22%24initial_referring_domain%22%3A%22bugfix.stage.mspbackups.com%22%2C%22%24referrer%22%3A%22https%3A%2F%2Fstage595.stage.mspbackups.com%2FAP%2FMonitoring%2F%22%2C%22%24referring_domain%22%3A%22stage595.stage.mspbackups.com%22%2C%22%24sesid%22%3A%5B1658324059212%2C%221821bc9a7c21f1-005639eb9778a7-26021a51-1bcab9-1821bc9a7c338d%22%5D%2C%22%24session_recording_enabled_server_side%22%3Afalse%2C%22%24user_id%22%3A%221a989efd-c148-477f-87c5-64ff602a9bcb%22%7D; _ga=GA1.4.579659360.1645688974; offset=-180; auth.cloudbackup.gapps=CfDJ8CEEPqXG-15MpsNYwca6ZGrqwlHXL1HqM-vNcDGHUtp6GLL9X9IxhLlxqzv44yZqD8h3B2BTUO68OMY0X9l-oOazRpx9dTUDK57XIs69dhVIOmRIBHDiuO3f808HlOD2kwlmb2F1fPepQNkFI-Z0FGOQ4kj0cJpYzhjJjAtBVWqGOYqeZ7Mn412GTe5g8bZfm4So_hwcrCHAHIpEOP4YEwYldxHnjZaQR8N2qColXjqxWJJS88Sc5iROUV6ocdY6s2rmrKT0uOYFu_vWOwvSu2ciHodQgSv730TgsbhH9S2vpzboES9lTN9KVnRhETU8IEcS4zLcRkut0sr-U2YC3Q34VVn7LoZmD1phEcqiErG9zs9XUNmDb4zC4iPjSJ6ME3bwHcdcOkLFpGIa-uFZ3Kapz9JK2Zy4VKJB6-Y--pYyWkasT6cnFUrJ4cU7JABHiohB7ZEPKwYt2zJAcdGLIqYKDbl8uRM8SuJX6HsWFjUeVUsUdTYLi3ntaPvlwWFG_K3NL2Wycw7PvOMKn4FLGhkaznMnB-i6VNWDWGE4-ck5XYAnyE1DHByJpDrFIapjSsbelrpkFJyZpR5ge34FuFl-dIVhurSehWqbbq2GLQYN-Dlxy-xaaM70WXchMvH5o9FLVwdV_0Gx3oYIWWnl52EdsdepvgXsYsvKh5xkpzUt-gk29g_IcYeisdNDdD2r5_xtOXtMXwrL1P2rSyn2tvZxUT1D2gWg4x50Tfonrmf3W953u88fnEHMmUaGlD9Qs7AJZT0YrWJhZMXXuz3v9Tc; auth.cloudbackup.admin=CfDJ8CEEPqXG-15MpsNYwca6ZGpMOcFvmdIztJGOHCSj7KM1JAKu2GU4zNCJQiVtBeLya_YRmKytEVxwaVrGHtDCPwtq2qO9p-1HHR8VRTObvu3XSEps5aAJzOSn-s9G11DorQs0sTKI_JeLt1wRW-nU_8H1QuH9rmw4pZ8pOPwMI9EA91c7xB6WC79EkeiQHthwPdQigsnBPxDYT7BTzWJvtMOFIQhVS1X55nQdamLNySZa3Q0fmv6IVBZX_VbIt5CQna9N54u5vjbrKjZHoJmRE-4Cr2PmoRQz7SQVjbpOYsAWMtEw3-hhC6snptDEY4Wb_HbfIvDa9q0PALvIwzpm5xn-MAEo42n_LBpxxHoiSjjls063EOU0wDRAloa2bokIXaiXEmQZrigL8VkvDn7SpwHrpZGNTBd85QTMjFvvw3vp9tQMuO24-s2nEIWLTjrgXtAQAcUt2LB2tMpY4RKWj4qqOJCX_lsd7DUTmIdChB2iTTclwcnTnLFbuX2OKFCJF6Nm9d2lhSvOZghLUI7yqTy9LIbaqWf4ymrRySQvBnBQbG-nIjfSxdCA3ue2Gz5-9qCsln8i8vHjD6a6VoLTactmHPC8IOVsYvHX-7XAgNDMo9BRl8RviSogf4ZJWAvhZfAwcON8VleqXZmmibNBdDX-No-3Iw7YlJwFg-ba0ulWelniTbQQ43jMWASClwXnWQpBDggizUGx5ZwyIwRZ4w0iMUpJoe3HZYyV03lnSjwKnkevjDP_S0nUwZRruA0PNV4u1HmoUMzU8H38lKlIJdV8oCf3zdyGF5fQnOSugmpmZrYFXIhwIrJzsVA4egoq1qZdlNhqSXUIKZqA1Hit_I4; _sleek_session=%7B%22init%22%3A%222022-06-17T12%3A04%3A55.230Z%22%2C%22announced_latest%22%3A%222022-09-01T09%3A51%3A47Z%22%7D; _gid=GA1.4.395368660.1662040472; auth.cloudbackup.office=CfDJ8CEEPqXG-15MpsNYwca6ZGpbFaeE16iDTB1sD84bIvtb59eAln0A_ho4pMpFi-8x-hvzeRvprt9fRohl9dFzphOZFgbuTS0UhmqP79NopFfRheB3-hQKvMdPbCubSA0TxMKBAf4zQZruCj7zMWhk0LOqiKA-vUwG3Fy5HuagNNqrVndGlGbYe8H9N1SgW_h3o4Q84seCsHaQ3NirGqx1KooFhc6iHDOOxlu8NBW4imlOpaut2KuKJ5IkXtL73HIsnDOuFehg7plegCzBXTNyeLZrN5Oo4KmIG8pu0Zy684ykkomjZbGkiQn5xn8KSrTy6ZKF8UCO_zlTgOkaUWQuNl1zcnC84nf0aLTikQL0Hug4l0ETqvnE0omh7ZOxZ2N-fnP9Bb_YrU8TMIY81be4YAsGFDe21cbHUg1LOyBGGuRx7vShUZ7ebXTrcD_Q3YPw2sFCMj-6FXw-iaj8FUOHzfX7sWt0P5NB-4N_8_gR6Wyl0eql6fmJyNQohBAIMZ_nW2gDZrcaYRraUA1eHma8wxs3SVUi1WEOqH8MO3_MoevWBCMecQqF5m5sryixVnvPDbTmIpuqji41mJ2G0avB-sw8RfBqGFvvvfTUuXG7y10ist0t4zLn2PpgnBGlSChpYEcA9sDNL127ksFx4c1QliQRtUMmqwCBbbXDjslHqDv2aXFUf0Y2tUgcg_P7S0WTlIGIzXogJ_Rw7udxkz4MCerVBWU4NVhfhVXy7Xki-VGs3YIVt9I925xdXssoZm-05BwNaglU7Nb_nfNaPDi6fEw; ph_phc_ryMka3Ji8Hf5SIedewlqATKInfZy2eAo0KTpNpMRSbO_posthog=%7B%22distinct_id%22%3A%226c51ecfd-0cf5-4aa5-9b48-2f64b78e27ef%22%2C%22%24device_id%22%3A%2218161422cd629d-0feeefb1172cf3-14333270-1fa400-18161422cd76c8%22%2C%22%24initial_referrer%22%3A%22https%3A%2F%2Fbugfix.stage.mspbackups.com%2FAdmin%2FLogin.aspx%3Fref%3D%252FAdmin%252FDefault.aspx%22%2C%22%24initial_referring_domain%22%3A%22bugfix.stage.mspbackups.com%22%2C%22%24referrer%22%3A%22https%3A%2F%2Fmspbackups.com%2FAdmin%2FProcessPayment.aspx%3Ftype%3DSubscription%26OwnerID%3D6c51ecfd-0cf5-4aa5-9b48-2f64b78e27ef%26customPrice%3D1%26InvoiceID%3D%22%2C%22%24referring_domain%22%3A%22mspbackups.com%22%2C%22%24sesid%22%3A%5B1662111400674%2C%22182fd86b7e540f-0de55e32a72665-26021d51-1bcab9-182fd86b7e6967%22%5D%2C%22%24session_recording_enabled_server_side%22%3Atrue%2C%22%24active_feature_flags%22%3A%5B%5D%2C%22%24enabled_feature_flags%22%3A%7B%7D%2C%22%24user_id%22%3A%226c51ecfd-0cf5-4aa5-9b48-2f64b78e27ef%22%2C%22%24search_engine%22%3A%22google%22%7D"
+					},
+					{
+						"key": "origin",
+						"value": "https://officebackupapps.apps-stage.mspbackups.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://officebackupapps.apps-stage.mspbackups.com/gapps/dashboard"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ApplyToEnabledUsers\":false,\"Services\":[{\"Service\":\"Mail\",\"Enabled\":true},{\"Service\":\"Drive\",\"Enabled\":true},{\"Service\":\"Contacts\",\"Enabled\":true},{\"Service\":\"Calendar\",\"Enabled\":true},{\"Service\":\"TeamDrives\",\"Enabled\":true}]}"
+				},
+				"url": {
+					"raw": "https://officebackupapps.apps-stage.mspbackups.com",
+					"protocol": "https",
+					"host": [
+						"officebackupapps",
+						"apps-stage",
+						"mspbackups",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://officebackupapps.apps-stage.mspbackups.com/api/odata/Domains(d834afe9-718b-da08-0000-0239a4cddc39)/ConfigureServices",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "officebackupapps.apps-stage.mspbackups.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru,en-US;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json; charset=UTF-8"
+					},
+					{
+						"key": "cookie",
+						"value": "_ga=GA1.3.1965345408.1645539191; offset=-180; _ga=GA1.2.579659360.1645688974; ph_phc_gkxV2OJ4Rv0JQNq5pYTglr5yaAWltCMRS0Vfiv2NHSu_posthog=%7B%22distinct_id%22%3A%221a989efd-c148-477f-87c5-64ff602a9bcb%22%2C%22%24device_id%22%3A%22180655db8e12d0-02dfc709f1a383-6b3e555b-1fa400-180655db8e2c92%22%2C%22%24initial_referrer%22%3A%22https%3A%2F%2Fbugfix.stage.mspbackups.com%2FAdmin%2FLogin.aspx%3Fref%3D%252FAdmin%252FDefault.aspx%22%2C%22%24initial_referring_domain%22%3A%22bugfix.stage.mspbackups.com%22%2C%22%24referrer%22%3A%22https%3A%2F%2Fbugfix.stage.mspbackups.com%2FAP%2FLicenses.aspx%22%2C%22%24referring_domain%22%3A%22bugfix.stage.mspbackups.com%22%2C%22%24sesid%22%3A%5B1651173453765%2C%22180719b6fc665a-0d61b8edc778d3-6b3e555b-1bcab9-180719b6fc7710%22%5D%2C%22%24session_recording_enabled_server_side%22%3Afalse%2C%22%24active_feature_flags%22%3A%5B%5D%2C%22%24enabled_feature_flags%22%3A%7B%7D%2C%22%24user_id%22%3A%221a989efd-c148-477f-87c5-64ff602a9bcb%22%7D; _sleek_product=%7B%22token%22%3A%225154239742cac9c2518efbbf03632b0aef6ae8f90%22%2C%22user_data%22%3A%7B%22user_id%22%3A276501%2C%22admin_id%22%3A0%2C%22sso%22%3Atrue%2C%22anonymous%22%3Afalse%2C%22data_name%22%3A%22eb1349%22%2C%22data_full_name%22%3A%22%22%2C%22data_mail%22%3A%22eb%40wnet.ru%22%2C%22data_img%22%3A%22https%3A%2F%2Fstorage.sleekplan.com%2Fstatic%2Fimage%2Fuser.png%22%2C%22segments%22%3A%5B%5D%2C%22notify%22%3A1%2C%22notify_settings%22%3A%7B%22mention%22%3Atrue%2C%22changelog%22%3Afalse%2C%22subscribed%22%3Atrue%7D%7D%7D; ph_phc_98DByovK2hhLn5EuqWM3jC5rpAZECyjwr0f4ln3gZDO_posthog=%7B%22distinct_id%22%3A%221a989efd-c148-477f-87c5-64ff602a9bcb%22%2C%22%24device_id%22%3A%221808e7b5d032a7-0dbfc39c180ef6-6b3e555b-1bcab9-1808e7b5d04ad1%22%2C%22%24initial_referrer%22%3A%22https%3A%2F%2Fbugfix.stage.mspbackups.com%2FAdmin%2FLogin.aspx%3Fref%3D%252FAdmin%252FDefault.aspx%22%2C%22%24initial_referring_domain%22%3A%22bugfix.stage.mspbackups.com%22%2C%22%24referrer%22%3A%22https%3A%2F%2Fstage595.stage.mspbackups.com%2FAP%2FMonitoring%2F%22%2C%22%24referring_domain%22%3A%22stage595.stage.mspbackups.com%22%2C%22%24sesid%22%3A%5B1658324059212%2C%221821bc9a7c21f1-005639eb9778a7-26021a51-1bcab9-1821bc9a7c338d%22%5D%2C%22%24session_recording_enabled_server_side%22%3Afalse%2C%22%24user_id%22%3A%221a989efd-c148-477f-87c5-64ff602a9bcb%22%7D; _ga=GA1.4.579659360.1645688974; offset=-180; auth.cloudbackup.gapps=CfDJ8CEEPqXG-15MpsNYwca6ZGrqwlHXL1HqM-vNcDGHUtp6GLL9X9IxhLlxqzv44yZqD8h3B2BTUO68OMY0X9l-oOazRpx9dTUDK57XIs69dhVIOmRIBHDiuO3f808HlOD2kwlmb2F1fPepQNkFI-Z0FGOQ4kj0cJpYzhjJjAtBVWqGOYqeZ7Mn412GTe5g8bZfm4So_hwcrCHAHIpEOP4YEwYldxHnjZaQR8N2qColXjqxWJJS88Sc5iROUV6ocdY6s2rmrKT0uOYFu_vWOwvSu2ciHodQgSv730TgsbhH9S2vpzboES9lTN9KVnRhETU8IEcS4zLcRkut0sr-U2YC3Q34VVn7LoZmD1phEcqiErG9zs9XUNmDb4zC4iPjSJ6ME3bwHcdcOkLFpGIa-uFZ3Kapz9JK2Zy4VKJB6-Y--pYyWkasT6cnFUrJ4cU7JABHiohB7ZEPKwYt2zJAcdGLIqYKDbl8uRM8SuJX6HsWFjUeVUsUdTYLi3ntaPvlwWFG_K3NL2Wycw7PvOMKn4FLGhkaznMnB-i6VNWDWGE4-ck5XYAnyE1DHByJpDrFIapjSsbelrpkFJyZpR5ge34FuFl-dIVhurSehWqbbq2GLQYN-Dlxy-xaaM70WXchMvH5o9FLVwdV_0Gx3oYIWWnl52EdsdepvgXsYsvKh5xkpzUt-gk29g_IcYeisdNDdD2r5_xtOXtMXwrL1P2rSyn2tvZxUT1D2gWg4x50Tfonrmf3W953u88fnEHMmUaGlD9Qs7AJZT0YrWJhZMXXuz3v9Tc; auth.cloudbackup.admin=CfDJ8CEEPqXG-15MpsNYwca6ZGpMOcFvmdIztJGOHCSj7KM1JAKu2GU4zNCJQiVtBeLya_YRmKytEVxwaVrGHtDCPwtq2qO9p-1HHR8VRTObvu3XSEps5aAJzOSn-s9G11DorQs0sTKI_JeLt1wRW-nU_8H1QuH9rmw4pZ8pOPwMI9EA91c7xB6WC79EkeiQHthwPdQigsnBPxDYT7BTzWJvtMOFIQhVS1X55nQdamLNySZa3Q0fmv6IVBZX_VbIt5CQna9N54u5vjbrKjZHoJmRE-4Cr2PmoRQz7SQVjbpOYsAWMtEw3-hhC6snptDEY4Wb_HbfIvDa9q0PALvIwzpm5xn-MAEo42n_LBpxxHoiSjjls063EOU0wDRAloa2bokIXaiXEmQZrigL8VkvDn7SpwHrpZGNTBd85QTMjFvvw3vp9tQMuO24-s2nEIWLTjrgXtAQAcUt2LB2tMpY4RKWj4qqOJCX_lsd7DUTmIdChB2iTTclwcnTnLFbuX2OKFCJF6Nm9d2lhSvOZghLUI7yqTy9LIbaqWf4ymrRySQvBnBQbG-nIjfSxdCA3ue2Gz5-9qCsln8i8vHjD6a6VoLTactmHPC8IOVsYvHX-7XAgNDMo9BRl8RviSogf4ZJWAvhZfAwcON8VleqXZmmibNBdDX-No-3Iw7YlJwFg-ba0ulWelniTbQQ43jMWASClwXnWQpBDggizUGx5ZwyIwRZ4w0iMUpJoe3HZYyV03lnSjwKnkevjDP_S0nUwZRruA0PNV4u1HmoUMzU8H38lKlIJdV8oCf3zdyGF5fQnOSugmpmZrYFXIhwIrJzsVA4egoq1qZdlNhqSXUIKZqA1Hit_I4; _sleek_session=%7B%22init%22%3A%222022-06-17T12%3A04%3A55.230Z%22%2C%22announced_latest%22%3A%222022-09-01T09%3A51%3A47Z%22%7D; _gid=GA1.4.395368660.1662040472; auth.cloudbackup.office=CfDJ8CEEPqXG-15MpsNYwca6ZGpbFaeE16iDTB1sD84bIvtb59eAln0A_ho4pMpFi-8x-hvzeRvprt9fRohl9dFzphOZFgbuTS0UhmqP79NopFfRheB3-hQKvMdPbCubSA0TxMKBAf4zQZruCj7zMWhk0LOqiKA-vUwG3Fy5HuagNNqrVndGlGbYe8H9N1SgW_h3o4Q84seCsHaQ3NirGqx1KooFhc6iHDOOxlu8NBW4imlOpaut2KuKJ5IkXtL73HIsnDOuFehg7plegCzBXTNyeLZrN5Oo4KmIG8pu0Zy684ykkomjZbGkiQn5xn8KSrTy6ZKF8UCO_zlTgOkaUWQuNl1zcnC84nf0aLTikQL0Hug4l0ETqvnE0omh7ZOxZ2N-fnP9Bb_YrU8TMIY81be4YAsGFDe21cbHUg1LOyBGGuRx7vShUZ7ebXTrcD_Q3YPw2sFCMj-6FXw-iaj8FUOHzfX7sWt0P5NB-4N_8_gR6Wyl0eql6fmJyNQohBAIMZ_nW2gDZrcaYRraUA1eHma8wxs3SVUi1WEOqH8MO3_MoevWBCMecQqF5m5sryixVnvPDbTmIpuqji41mJ2G0avB-sw8RfBqGFvvvfTUuXG7y10ist0t4zLn2PpgnBGlSChpYEcA9sDNL127ksFx4c1QliQRtUMmqwCBbbXDjslHqDv2aXFUf0Y2tUgcg_P7S0WTlIGIzXogJ_Rw7udxkz4MCerVBWU4NVhfhVXy7Xki-VGs3YIVt9I925xdXssoZm-05BwNaglU7Nb_nfNaPDi6fEw; ph_phc_ryMka3Ji8Hf5SIedewlqATKInfZy2eAo0KTpNpMRSbO_posthog=%7B%22distinct_id%22%3A%226c51ecfd-0cf5-4aa5-9b48-2f64b78e27ef%22%2C%22%24device_id%22%3A%2218161422cd629d-0feeefb1172cf3-14333270-1fa400-18161422cd76c8%22%2C%22%24initial_referrer%22%3A%22https%3A%2F%2Fbugfix.stage.mspbackups.com%2FAdmin%2FLogin.aspx%3Fref%3D%252FAdmin%252FDefault.aspx%22%2C%22%24initial_referring_domain%22%3A%22bugfix.stage.mspbackups.com%22%2C%22%24referrer%22%3A%22https%3A%2F%2Fmspbackups.com%2FAdmin%2FProcessPayment.aspx%3Ftype%3DSubscription%26OwnerID%3D6c51ecfd-0cf5-4aa5-9b48-2f64b78e27ef%26customPrice%3D1%26InvoiceID%3D%22%2C%22%24referring_domain%22%3A%22mspbackups.com%22%2C%22%24sesid%22%3A%5B1662127900978%2C%22182fd86b7e540f-0de55e32a72665-26021d51-1bcab9-182fd86b7e6967%22%5D%2C%22%24session_recording_enabled_server_side%22%3Atrue%2C%22%24active_feature_flags%22%3A%5B%5D%2C%22%24enabled_feature_flags%22%3A%7B%7D%2C%22%24user_id%22%3A%226c51ecfd-0cf5-4aa5-9b48-2f64b78e27ef%22%2C%22%24search_engine%22%3A%22google%22%7D"
+					},
+					{
+						"key": "origin",
+						"value": "https://officebackupapps.apps-stage.mspbackups.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://officebackupapps.apps-stage.mspbackups.com/office/dashboard"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ApplyToEnabledUsers\":false,\"Services\":[{\"Service\":\"Mail\",\"Enabled\":true},{\"Service\":\"Drive\",\"Enabled\":true},{\"Service\":\"Contacts\",\"Enabled\":true},{\"Service\":\"Calendar\",\"Enabled\":true},{\"Service\":\"SharePoint\",\"Enabled\":true},{\"Service\":\"Teams\",\"Enabled\":true}]}"
+				},
+				"url": {
+					"raw": "https://officebackupapps.apps-stage.mspbackups.com/api/odata/Domains(d834afe9-718b-da08-0000-0239a4cddc39)/ConfigureServices",
+					"protocol": "https",
+					"host": [
+						"officebackupapps",
+						"apps-stage",
+						"mspbackups",
+						"com"
+					],
+					"path": [
+						"api",
+						"odata",
+						"Domains(d834afe9-718b-da08-0000-0239a4cddc39)",
+						"ConfigureServices"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
